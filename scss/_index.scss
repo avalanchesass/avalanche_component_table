@@ -1,0 +1,56 @@
+@import 'avalanchesass_component_table/style_guide';
+@import 'avalanchesass_component_table/variable';
+@import 'avalanchesass_component_table/mixin';
+
+/* extract component.css */
+/* extract component_table.css */
+/*---
+title:   Example
+name:    component_table_example
+section: component_table
+---
+
+Table classes.
+
+```example:html
+<table class="#{$c-table-namespace}">
+  <thead>
+    <tr>
+      <th>Column 1</th>
+      <th>Column 1</th>
+      <th>Column 1</th>
+      <th class="#{$c-table-namespace}__numeric">Column 1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td class="#{$c-table-namespace}__numeric">123</td>
+    </tr>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td class="#{$c-table-namespace}__numeric">123</td>
+    </tr>
+    <tr>
+      <td>Lorem</td>
+      <td>Ipsum</td>
+      <td>Dolor</td>
+      <td class="#{$c-table-namespace}__numeric">123</td>
+    </tr>
+  </tbody>
+</table>
+```
+*/
+.#{$c-table-namespace} {
+  @include c-table();
+}
+
+.#{$c-table-namespace}__numeric {
+  @include c-table-column-numeric();
+}
+/* end extract component_table.css */
+/* end extract component.css */

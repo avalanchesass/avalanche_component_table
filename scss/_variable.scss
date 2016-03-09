@@ -1,0 +1,15 @@
+@import 'avalanchesass_component_hn/style_guide';
+
+$c-table-namespace: '#{map-get($namespace, component)}table' !default;
+
+/*---
+title:   Variable
+name:    component_table_variable
+section: component_table
+order:   3
+---
+
+```css
+$c-table-namespace: '#{$c-table-namespace}';
+```
+*/

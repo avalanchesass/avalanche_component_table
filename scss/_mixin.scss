@@ -1,0 +1,33 @@
+@import 'avalanchesass_component_table/style_guide';
+
+/*---
+title:   Mixin
+name:    component_table_mixin
+section: component_table
+order:   2
+---
+
+```css
+c-table()
+```
+*/
+@mixin c-table-column() {
+  padding: map-get($spacing, xs) map-get($spacing, s);
+  border-bottom: 1px solid map-get($cs-grey, a);
+  vertical-align: top;
+}
+
+@mixin c-table-column-numeric() {
+  text-align: right;
+}
+
+@mixin c-table() {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  text-align: left;
+  th,
+  td {
+    @include c-table-column();
+  }
+}
