@@ -46,7 +46,7 @@ Table classes.
 ```
 */
 .#{$c-table-namespace} {
-  @include c-table();
+  @include c-table($c-table-column-padding, $c-table-column-border);
 }
 
 .#{$c-table-namespace}__numeric {

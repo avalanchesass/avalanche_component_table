@@ -8,26 +8,35 @@ order:   2
 ---
 
 ```css
-c-table()
+// Table.
+c-table([$-column-padding: map-get($spacing, xs) map-get($spacing, s)[, $-column-border: 1px solid map-get($cs-grey, a)]])
+
+// Table column.
+c-table-column([$-padding: map-get($spacing, xs) map-get($spacing, s)[, $-border: 1px solid map-get($cs-grey, a)]])
+
+// Numeric table column.
+c-table-column-numeric()
 ```
 */
-@mixin c-table-column() {
-  padding: map-get($spacing, xs) map-get($spacing, s);
-  border-bottom: 1px solid map-get($cs-grey, a);
+@mixin c-table-column($-padding: map-get($spacing, xs) map-get($spacing, s), $-border: 1px solid map-get($cs-grey, a)) {
+  padding: $-padding;
   vertical-align: top;
+  @if $-border {
+    border-bottom: $-border;
+  }
 }
 
 @mixin c-table-column-numeric() {
   text-align: right;
 }
 
-@mixin c-table() {
+@mixin c-table($-column-padding: map-get($spacing, xs) map-get($spacing, s), $-column-border: 1px solid map-get($cs-grey, a)) {
   width: 100%;
   border-collapse: collapse;
   table-layout: fixed;
   text-align: left;
   th,
   td {
-    @include c-table-column();
+    @include c-table-column($-column-padding, $-column-border);
   }
 }
