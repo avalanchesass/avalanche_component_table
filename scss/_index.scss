@@ -13,7 +13,7 @@ section: component_table
 Table classes.
 
 ```example:html
-<table class="#{$c-table-namespace}">
+<table class="#{$c-table-namespace} #{$c-table-namespace}--zebra-striped">
   <thead>
     <tr>
       <th>Column 1</th>
@@ -51,6 +51,12 @@ Table classes.
 
 .#{$c-table-namespace}__numeric {
   @include c-table-column-numeric();
+}
+
+.#{$c-table-namespace}--zebra-striped {
+  tbody {
+    @include c-table-zebra-striped();
+  }
 }
 /* end extract component_table.css */
 /* end extract component.css */

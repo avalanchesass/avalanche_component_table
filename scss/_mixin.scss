@@ -40,3 +40,9 @@ c-table-column-numeric()
     @include c-table-column($-column-padding, $-column-border);
   }
 }
+
+@mixin c-table-zebra-striped($-color: mix(map-get($cs, a), #fff, 2%)) {
+  > :nth-child(odd) {
+    background-color: $-color;
+  }
+}
