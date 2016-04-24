@@ -1,6 +1,9 @@
-@import 'avalanchesass_component_hn/style_guide';
+@import 'avalanchesass_component_table/style_guide';
 
 $c-table-namespace: '#{map-get($namespace, component)}table' !default;
+
+$c-table-column-padding: map-get($spacing, xs) map-get($spacing, s) !default;
+$c-table-column-border: 1px solid map-get($cs-grey, a) !default;
 
 /*---
 title:   Variable
@@ -11,5 +14,7 @@ order:   3
 
 ```css
 $c-table-namespace: '#{$c-table-namespace}';
+$c-table-column-padding: #{$c-table-column-padding};
+$c-table-column-border: #{$c-table-column-border};
 ```
 */
