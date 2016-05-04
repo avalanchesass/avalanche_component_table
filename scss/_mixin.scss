@@ -33,7 +33,6 @@ c-table-column-numeric()
 @mixin c-table($-column-padding: map-get($spacing, xs) map-get($spacing, s), $-column-border: 1px solid map-get($cs-grey, a)) {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
   text-align: left;
   th,
   td {
