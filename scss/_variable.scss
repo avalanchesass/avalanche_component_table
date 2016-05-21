@@ -2,7 +2,7 @@
 
 $c-table-namespace: '#{map-get($namespace, component)}table' !default;
 
-$c-table-column-padding: map-get($spacing, xs) map-get($spacing, s) !default;
+$c-table-column-padding: map-get($spacing, xs) map-get($spacing, xs) !default;
 $c-table-column-border: 1px solid map-get($cs-grey, a) !default;
 /*---
 title:   Variable
